@@ -13,7 +13,7 @@ endif()
 # ##############################################################################
 option(BUILD_DOCS "Compiles documentation" TRUE)
 option(STATIC_ANALYSIS "Use static analysis tools" TRUE)
-option(OPTIMIZE_DEBUG "Enable compile time optimization for debug build" TRUE)
+option(OPTIMIZE_DEBUG "Enable compile time optimization for debug build" FALSE)
 set(LUDUS_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
 set(LUDUS_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 

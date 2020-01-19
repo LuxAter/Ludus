@@ -7,8 +7,11 @@
 
 int main(int argc, char const *argv[]) {
   ludus::logger::initalize_core_logger();
-  ludus::logger::core::info("Data Dir: {}", ludus::fs::get_data_dir().string());
-  ludus::logger::core::info("Config Dir: {}",
-                            ludus::fs::get_config_dir().string());
+  ludus::Yaml config =
+      ludus::Yaml::load(ludus::fs::get_config_dir().append("ludus/config.yml"),
+                        ludus::Yaml("version: 0.1.0"));
+  LINFO("Default CONFIG: {}", config.string());
+  ludus::Yaml::save(ludus::fs::get_config_dir().append("ludus/config.yml"),
+                    config);
   return 0;
 }

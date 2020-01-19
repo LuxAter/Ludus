@@ -15,6 +15,9 @@ public:
 
   static Yaml load(const std::string &file);
   static Yaml load(const std::string &file, const Yaml &default_value);
+  static void save(const std::string &file, const Yaml &data);
+
+  std::string string() const;
 
   template <typename T> inline YAML::Node operator[](const T &key) {
     return node[key];
@@ -23,6 +26,9 @@ public:
   inline const YAML::Node &operator[](const T &key) const {
     return node[key];
   }
+
+  inline YAML::Node &get_node() { return node; }
+  inline const YAML::Node &get_node() const { return node; }
 
 private:
   YAML::Node node;
