@@ -23,3 +23,4 @@ endmacro()
 # DEPENDENCIES
 # ##############################################################################
 option(SPDLOG_BUILD_SHARED "" ${BUILD_SHARED_LIBS})
+load_submodule(spdlog)

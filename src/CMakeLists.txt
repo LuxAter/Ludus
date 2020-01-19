@@ -5,7 +5,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LUDUS_BINARY_DIR})
 # ##############################################################################
 # SOURCE FILES
 # ##############################################################################
-set(SOURCES main.cpp)
+set(SOURCES main.cpp log.cpp)
 configure_file("${LUDUS_SOURCE_DIR}/src/version.hpp.in"
                "${LUDUS_SOURCE_DIR}/src/version.hpp")
 
@@ -20,4 +20,7 @@ set_target_properties(
   specula 
   PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED YES CXX_EXTENSIONS OFF)
 target_link_libraries(specula spdlog)
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  target_link_libraries(specula)
+endif()
 install(TARGETS specula RUNTIME DESTINATION lib)
