@@ -3,6 +3,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <string>
 #include <unordered_map>
 
 #ifdef __DEBUG__
@@ -197,53 +198,53 @@ namespace logger {
 
   namespace core {
     template <typename... _ARGS>
-    inline void trace(std::string_view fmt, const _ARGS &... args) {
+    inline void trace(std::string fmt, const _ARGS &... args) {
       get_core()->trace(fmt, args...);
     }
     template <typename... _ARGS>
-    inline void debug(std::string_view fmt, const _ARGS &... args) {
+    inline void debug(std::string fmt, const _ARGS &... args) {
       get_core()->debug(fmt, args...);
     }
     template <typename... _ARGS>
-    inline void info(std::string_view fmt, const _ARGS &... args) {
+    inline void info(std::string fmt, const _ARGS &... args) {
       get_core()->info(fmt, args...);
     }
     template <typename... _ARGS>
-    inline void warn(std::string_view fmt, const _ARGS &... args) {
+    inline void warn(std::string fmt, const _ARGS &... args) {
       get_core()->warn(fmt, args...);
     }
     template <typename... _ARGS>
-    inline void error(std::string_view fmt, const _ARGS &... args) {
+    inline void error(std::string fmt, const _ARGS &... args) {
       get_core()->error(fmt, args...);
     }
     template <typename... _ARGS>
-    inline void critical(std::string_view fmt, const _ARGS &... args) {
+    inline void critical(std::string fmt, const _ARGS &... args) {
       get_core()->info(fmt, args...);
     }
   } // namespace core
   namespace client {
     template <typename... _ARGS>
-    inline void trace(std::string_view fmt, const _ARGS &... args) {
+    inline void trace(std::string fmt, const _ARGS &... args) {
       get_client()->trace(fmt, args...);
     }
     template <typename... _ARGS>
-    inline void debug(std::string_view fmt, const _ARGS &... args) {
+    inline void debug(std::string fmt, const _ARGS &... args) {
       get_client()->debug(fmt, args...);
     }
     template <typename... _ARGS>
-    inline void info(std::string_view fmt, const _ARGS &... args) {
+    inline void info(std::string fmt, const _ARGS &... args) {
       get_client()->info(fmt, args...);
     }
     template <typename... _ARGS>
-    inline void warn(std::string_view fmt, const _ARGS &... args) {
+    inline void warn(std::string fmt, const _ARGS &... args) {
       get_client()->warn(fmt, args...);
     }
     template <typename... _ARGS>
-    inline void error(std::string_view fmt, const _ARGS &... args) {
+    inline void error(std::string fmt, const _ARGS &... args) {
       get_client()->error(fmt, args...);
     }
     template <typename... _ARGS>
-    inline void critical(std::string_view fmt, const _ARGS &... args) {
+    inline void critical(std::string fmt, const _ARGS &... args) {
       get_client()->info(fmt, args...);
     }
   } // namespace client

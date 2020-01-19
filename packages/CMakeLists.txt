@@ -24,3 +24,5 @@ endmacro()
 # ##############################################################################
 option(SPDLOG_BUILD_SHARED "" ${BUILD_SHARED_LIBS})
 load_submodule(spdlog)
+load_submodule(yaml-cpp)
+load_submodule(filesystem)

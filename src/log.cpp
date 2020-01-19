@@ -3,6 +3,7 @@
 #include <iostream>
 #include <memory>
 #include <stack>
+#include <string>
 
 #include <spdlog/fmt/ostr.h>
 #include <spdlog/sinks/basic_file_sink.h>
